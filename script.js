@@ -6,14 +6,12 @@
 //   console.log(response);
 // });
 
-var labels = [];
+
+function sohRoute(){
+  var labels = [];
 var arr = [];
-let min = 1;
-let max = 45;
-function getRandomInt(min, max) {
-  min = Math.ceil(min);
-  max = Math.floor(max);
-  let no = Math.floor(Math.random() * (max - min) + min);
+function getRandomInt() {
+  let no = Math.floor((Math.random() * 10) + 1)
   arr.push(no);
 }
 for (let i = 1; i <= 45; i++) {
@@ -28,7 +26,7 @@ const data = {
   labels: labels,
   datasets: [
     {
-      label: "SOC",
+      label: "SOH",
       backgroundColor: "rgb(255, 99, 132)",
       borderColor: "rgb(255, 99, 132)",
       data: arr,
@@ -43,3 +41,4 @@ const config = {
 };
 
 const myChart = new Chart(document.getElementById("myChart"), config);
+}
